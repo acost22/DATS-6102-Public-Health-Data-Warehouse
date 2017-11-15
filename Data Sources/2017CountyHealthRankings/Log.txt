@@ -1,0 +1,11 @@
+Preprocessing:
+1.Split the .xlsx file into multiple .csv files
+2.Encoding the parameters in Ranked Measure Data by measure and data elements, following the "Measure-Data element" format.
+  For example, "Premature death" has five data elements: "#Deaths", "Years of Potential Life Lost Rate"
+  "95% CI-low", "95%CI-high" and "Z-Score". They are encoded as: 1-1 through 1-5
+  
+  The parameter codes are included in the "Metadata.csv".
+3.Encoding the parameters in SubRankings by their initials (e.g. LL stands for Length of life) and _Z (z-score) or _R (ranking).
+4.Encoding the parameters in Additional Measures by measures and data elements, following the "Measure-Data element" format.
+  For example, "Premature age-adjusted mortality" has five data elements:"#Deaths", "Age-adjusted Mortality",
+  "95% CI-Low", "95% CI-High". They are encoded as: a-1 through a-4

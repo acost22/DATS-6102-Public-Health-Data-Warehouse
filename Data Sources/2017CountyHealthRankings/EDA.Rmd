@@ -1,0 +1,38 @@
+---
+title: "DATS6103_Project"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+setwd("D:/GWU_DS/DS6102/DATS-6102-Public-Health-Data-Warehouse/Data Sources/2017CountyHealthRankings")
+```
+
+## Health Outcomes and Factors
+```{r health factors}
+HealthRankings <- read.csv("HealthFactor.csv")
+
+#remove the first row
+HealthRankings<- HealthRankings[-1,]
+#check the number of 
+summary(is.na(HealthRankings))
+summary(HealthRankings)
+
+#counties with the lowest and highest rankings of health outcomes and health factors
+HealthRankings[which.max(HealthRankings$HealthOutcomes_R),]
+HealthRankings[which.max(HealthRankings$HealthFactors_R),]
+
+HealthRankings[which.min(HealthRankings$HealthOutcomes_R),]
+HealthRankings[which.min(HealthRankings$HealthFactors_R),]
+```
+
+## Subrankings
+```{r subrankings}
+SubRanking <- read.csv("SubRanking.csv")
+
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
